@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Marlow Gallery Heist</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; background: #0a1018; height: 100%;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  body {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 100vh; color: #e8e2d0;
+  }
+  #wrap { width: min(1280px, 100vw); }
+  canvas {
+    display: block; width: 100%; height: auto;
+    background: #16222e; border: 2px solid #8a6d3b; box-sizing: border-box;
+  }
+  #help {
+    width: 100%; box-sizing: border-box; padding: 10px 14px;
+    font-size: 14px; color: #8fa3b5; text-align: center; line-height: 1.5;
+  }
+  #help b { color: #ffd34d; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="help">
+    <b>WASD / arrows</b> move &nbsp;·&nbsp; <b>Shift</b> sneak &nbsp;·&nbsp; <b>Click floor</b> walk there
+    &nbsp;·&nbsp; <b>F</b> pick up / hold to pick a lock &nbsp;·&nbsp; <b>1</b> smoke bomb (15c)
+    &nbsp;·&nbsp; <b>2</b> camera jammer (20c) &nbsp;·&nbsp; <b>M</b> mute &nbsp;·&nbsp; <b>R</b> restart room
+    <br>Stay out of the red guard cones and amber camera sweeps. Grab the main prize, then reach the green EXIT.
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
